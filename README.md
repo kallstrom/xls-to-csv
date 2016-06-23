@@ -14,13 +14,13 @@ Add the following to your leiningen dependencies:
 
 ```clojure
 (ns example.core
-  (:require [xls-to-csv.converter :as xls]))
+  (:require [xls-to-csv.core :as xls]))
 
 ;; convert xls spreadsheet to csv file
 (xls->csv "input.xls" "output.csv")
 
 ;; or multidimensional vector
-(xls->data "input.xls")
+(xls->vec "input.xls")
 ```
 
 XLS spreadsheets containing formulas cannot be converted to CSV, yet. When a cell containing a formula is encountered an error will be thrown.
